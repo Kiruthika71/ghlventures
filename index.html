@@ -116,10 +116,33 @@
                                 <li>You agree to the <span><a href="#">Terms & Conditions</a></span> and <span><a href="#">Privacy Policy</a></span></li>
                             </ul>
                         </div>
-                        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModal">Submit</button>
                     </form>
 
-                    <p class="mb-0 sign-up">Already have an account? <span><a href="#">Sign Up</a></span></p>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header d-flex align-items-center justify-content-between w-100" style="border-bottom: none;">
+                              <h5 class="modal-title" id="exampleModalLabel">Enter OTP</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body verification-code--inputs">
+                                <input type="text" maxlength="1" />
+                                <input type="text" maxlength="1" />
+                                <input type="text" maxlength="1" />
+                                <input type="text" maxlength="1" />
+                                <input type="text" maxlength="1" />
+                                <input type="text" maxlength="1" />
+                            </div>
+                            <input type="hidden" id="verificationCode" />
+                            <div class="modal-footer" style="border-top: none;">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Verify</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -316,13 +339,11 @@
             </div>
         </div>
     </div>
-
     <!-- Testmonial -->
     <div class="container" style="margin-top: 2rem;">
         <h2 class="text-center">Our Investors Love</h2>
         <div class="sliderclass col-md-12 mt-2">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
-                data-interval="100000">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
                 <div class="w-100 carousel-inner mb-5" role="listbox">
                     <div class="carousel-item active">
                         <div class="bg"></div>
@@ -420,16 +441,12 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                    data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i
-                            class="fas fa-chevron-left"></i></span>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                    data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i
-                            class="fas fa-chevron-right"></i></span>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -475,7 +492,55 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            var items = $('#carouselExampleControls .carousel-item');
+            var currentIndex = 0;
+            var totalItems = items.length;
 
+            function cycleItems() {
+                if (currentIndex < totalItems - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                items.removeClass('active');
+                items.eq(currentIndex).addClass('active');
+            }
+
+            var autoCycle = setInterval(cycleItems, 3000);
+
+            $('#carouselExampleControls').hover(function() {
+                clearInterval(autoCycle);
+            }, function() {
+                autoCycle = setInterval(cycleItems, 3000);
+            });
+
+            $('.carousel-control-prev').click(function() {
+                clearInterval(autoCycle);
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = totalItems - 1;
+                }
+                items.removeClass('active');
+                items.eq(currentIndex).addClass('active');
+                autoCycle = setInterval(cycleItems, 3000);
+            });
+
+            $('.carousel-control-next').click(function() {
+                clearInterval(autoCycle);
+                if (currentIndex < totalItems - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                items.removeClass('active');
+                items.eq(currentIndex).addClass('active');
+                autoCycle = setInterval(cycleItems, 3000);
+            });
+        });
+    </script>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,32 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-    <!-- intl-tel-input CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="index.css">
+
+    <!-- Include the intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <!-- Include the intl-tel-input JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <!-- Logo -->
     <div class="header">
         <div class="container header-container">
@@ -55,14 +63,15 @@
                 </div>
 
                 <div style="margin-left: 15px;">
-                    <div class="d-flex align-items-start content" style="margin-top: 35px; margin-bottom: 20px; gap: 25px;">
+                    <div class="d-flex align-items-start content"
+                        style="margin-top: 35px; margin-bottom: 20px; gap: 25px;">
                         <i class="fa-solid fa-coins"></i>
                         <div class="box">
                             <h5 class="mb-0">Facilitated Investments</h5>
                             <p>Facilitated investments totaling over $3.2 M+</p>
                         </div>
                     </div>
-    
+
                     <div class="d-flex align-items-start content" style="gap: 25px; margin-bottom: 20px;">
                         <i class="fa-solid fa-clock"></i>
                         <div class="box">
@@ -78,7 +87,7 @@
                             <p>Clients spanning across 20+ states & 3+ countries</p>
                         </div>
                     </div>
-    
+
                     <div class="d-flex align-items-start content" style="gap: 25px; margin-bottom: 20px;">
                         <i class="fa-solid fa-earth-americas"></i>
                         <div class="box">
@@ -88,7 +97,7 @@
                     </div>
                     <h3 class="end-text">900+ Successful Investments, Join Us</h3>
                 </div>
-                
+
             </div>
 
             <div class="col-lg-5 col-md-12 col-12 mt-3">
@@ -101,9 +110,11 @@
                             <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Mobile Number</label>
-                            <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="name" required>
+                            <label for="mobile_code">Mobile Number</label>
+                            <input type="tel" id="mobile_code" class="form-control" placeholder="Phone Number"
+                                name="phone" required>
                         </div>
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
@@ -111,36 +122,41 @@
                         <div class="form-group">
                             <p class="mb-1">By signing up:</p>
                             <ul>
-                                <li>You confirm that you are above 18 years of age and that you are a citizen of India</li>
+                                <li>You confirm that you are above 18 years of age and that you are a citizen of India
+                                </li>
                                 <li>You agree to receive a call from GHL INDIA on fixed income investment products</li>
-                                <li>You agree to the <span><a href="#">Terms & Conditions</a></span> and <span><a href="#">Privacy Policy</a></span></li>
+                                <li>You agree to the <span><a href="#">Terms & Conditions</a></span> and <span><a
+                                            href="#">Privacy Policy</a></span></li>
                             </ul>
                         </div>
-                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal"
+                            data-target="#exampleModal">Submit</button>
                     </form>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header d-flex align-items-center justify-content-between w-100" style="border-bottom: none;">
-                              <h5 class="modal-title" id="exampleModalLabel">Enter OTP</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                            <div class="modal-content">
+                                <div class="modal-header d-flex align-items-center justify-content-between w-100"
+                                    style="border-bottom: none;">
+                                    <h5 class="modal-title" id="exampleModalLabel">Enter OTP</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body verification-code--inputs">
+                                    <input type="text" maxlength="1" />
+                                    <input type="text" maxlength="1" />
+                                    <input type="text" maxlength="1" />
+                                    <input type="text" maxlength="1" />
+                                    <input type="text" maxlength="1" />
+                                    <input type="text" maxlength="1" />
+                                </div>
+                                <input type="hidden" id="verificationCode" />
+                                <div class="modal-footer" style="border-top: none;">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Verify</button>
+                                </div>
                             </div>
-                            <div class="modal-body verification-code--inputs">
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                            </div>
-                            <input type="hidden" id="verificationCode" />
-                            <div class="modal-footer" style="border-top: none;">
-                              <button type="button" class="btn btn-danger" data-dismiss="modal">Verify</button>
-                            </div>
-                          </div>
                         </div>
                     </div>
                 </div>
@@ -223,14 +239,15 @@
                 </div>
 
                 <div style="margin-left: 15px;">
-                    <div class="d-flex align-items-start content" style="margin-top: 35px; margin-bottom: 20px; gap: 25px;">
+                    <div class="d-flex align-items-start content"
+                        style="margin-top: 35px; margin-bottom: 20px; gap: 25px;">
                         <i class="fa-solid fa-coins"></i>
                         <div class="box">
                             <h5 class="mb-0">Facilitated Investments</h5>
                             <p>Facilitated investments totaling over $3.2 M+</p>
                         </div>
                     </div>
-    
+
                     <div class="d-flex align-items-start content" style="gap: 25px; margin-bottom: 20px;">
                         <i class="fa-solid fa-clock"></i>
                         <div class="box">
@@ -246,7 +263,7 @@
                             <p>Clients spanning across 20+ states & 3+ countries</p>
                         </div>
                     </div>
-    
+
                     <div class="d-flex align-items-start content" style="gap: 25px; margin-bottom: 20px;">
                         <i class="fa-solid fa-earth-americas"></i>
                         <div class="box">
@@ -256,7 +273,7 @@
                     </div>
                     <h3 class="end-text">900+ Successful Investments, Join Us</h3>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -459,16 +476,20 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                            class="fas fa-chevron-left"></i></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"><i
+                            class="fas fa-chevron-right"></i></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
     </div>
+
+    <button class="back-to-top" title="Back to Top">&uarr;</button>
 
     <!-- Footer -->
     <div class="footer" style="margin-top: 7rem;">
@@ -510,7 +531,7 @@
     </div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var items = $('#carouselExampleControls .carousel-item');
             var currentIndex = 0;
             var totalItems = items.length;
@@ -527,13 +548,13 @@
 
             var autoCycle = setInterval(cycleItems, 3000);
 
-            $('#carouselExampleControls').hover(function() {
+            $('#carouselExampleControls').hover(function () {
                 clearInterval(autoCycle);
-            }, function() {
+            }, function () {
                 autoCycle = setInterval(cycleItems, 3000);
             });
 
-            $('.carousel-control-prev').click(function() {
+            $('.carousel-control-prev').click(function () {
                 clearInterval(autoCycle);
                 if (currentIndex > 0) {
                     currentIndex--;
@@ -545,7 +566,7 @@
                 autoCycle = setInterval(cycleItems, 3000);
             });
 
-            $('.carousel-control-next').click(function() {
+            $('.carousel-control-next').click(function () {
                 clearInterval(autoCycle);
                 if (currentIndex < totalItems - 1) {
                     currentIndex++;
@@ -560,7 +581,27 @@
     </script>
 
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            // Show or hide the back-to-top button based on scroll position
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+
+            // Scroll to top when the button is clicked
+            $('.back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+    </script>
 
     <!-- Country Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -579,4 +620,27 @@
 
     <script src="script.js"></script>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var input = document.querySelector("#mobile_code");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                fetch('https://ipinfo.io/json', {
+                    cache: 'reload'
+                }).then(response => {
+                    return response.json();
+                }).then(ipinfo => {
+                    console.log("Detected country code: " + ipinfo.country);
+                    callback(ipinfo.country);
+                }).catch(() => {
+                    callback('us');
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    });
+</script>
+
 </html>

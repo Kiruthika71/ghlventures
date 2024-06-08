@@ -196,6 +196,7 @@
 .income-box {
     padding: 20px 25px;
     background-color: #F7F7FD;
+    border: 1px solid black;
     color: black;
     border-radius: 1.5rem;
     display: flex;
@@ -275,6 +276,8 @@
     align-items: center;
     padding: 35px 40px;
 } 
+
+
 
 .gateway {
     display: flex;
@@ -552,12 +555,20 @@
         padding: 0;
     }
 
+    .gateway-reason {
+        margin-top: 25px;
+    }
+
     .gateway .text {
         display: none;
     }
 
     .gateway {
         padding: 0;
+    }
+
+    .gateway-title {
+        margin-top: 25px;
     }
 
     .gateway-title h4 {
@@ -591,6 +602,7 @@
 
     .header-span {
         font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .end-text {

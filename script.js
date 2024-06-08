@@ -1,3 +1,41 @@
+// Slick
+$(document).ready(function(){
+    $('.items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024, // screen width of 1024px or less
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true
+                }
+            },
+            {
+                breakpoint: 600, // screen width of 600px or less
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true
+                }
+            },
+            {
+                breakpoint: 480, // screen width of 480px or less
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true
+                }
+            }
+        ]
+    });
+});
+
+
+
+
 // Counter
 function counter(id, start, end, duration) {
     let obj = document.getElementById(id);
@@ -75,47 +113,3 @@ var $self = $(this);
 
 
 
-<script>
-        $(document).ready(function() {
-            var items = $('#carouselExampleControls .carousel-item');
-            var totalItems = items.length;
-            var currentIndex = 0;
-
-            $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
-                currentIndex = $(e.relatedTarget).index();
-            });
-
-            $('#carouselExampleControls').carousel({
-                interval: false
-            });
-
-            function cycleItems() {
-                if (currentIndex < totalItems - 1) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0;
-                }
-                $('#carouselExampleControls').carousel(currentIndex);
-            }
-
-            var autoCycle = setInterval(cycleItems, 3000);
-
-            $('#carouselExampleControls').hover(function() {
-                clearInterval(autoCycle);
-            }, function() {
-                autoCycle = setInterval(cycleItems, 3000);
-            });
-
-            $('.carousel-control-prev').click(function() {
-                clearInterval(autoCycle);
-                $('#carouselExampleControls').carousel('prev');
-                autoCycle = setInterval(cycleItems, 3000);
-            });
-
-            $('.carousel-control-next').click(function() {
-                clearInterval(autoCycle);
-                $('#carouselExampleControls').carousel('next');
-                autoCycle = setInterval(cycleItems, 3000);
-            });
-        });
-    </script>
